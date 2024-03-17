@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: linear-gradient(to right, #f2f2f2, #e5e5e5);
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 2rem;
+  animation: entrance 0.5s ease-in-out forwards;
+}
+
+@keyframes entrance {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.todo-list {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  padding: 2rem;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.contents {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  max-width: 300px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo-item:hover {
+  background-color: #f5f5f5;
+}
+
+.todo-item input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  appearance: none;
+  border-radius: 50%;
+  background-color: #ddd;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.todo-item input[type="checkbox"]:checked {
+  background-color: #2ecc71;
+}
+
+.todo-item label {
+  font-size: 1.2rem;
+  max-width: 200px;
+  cursor: pointer;
+  transition: text-decoration 0.2s ease-in-out;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.todo-item-input {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  outline: none;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.add-task-input {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  outline: none;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.add-task-input:focus {
+  border-color: #2ecc71;
+}
+
+.add-button {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  transition: background-color 0.2s ease-in-out;
+  margin-top: 1rem;
+}
+
+.add-button:hover {
+  background-color: #0062cc;
+}
+
+.todo-item button {
+  background-color: transparent;
+  border: none;
+  padding: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+.edit-button,
+.save-button {
+  color: #3498db;
+}
+
+.delete-button {
+  color: #e74c3c;
+}

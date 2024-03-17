@@ -1,0 +1,123 @@
+/* Reset default styles */
+body,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Import Roboto font */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+/* Style for the body */
+body {
+  background-color: #f7f7f7; /* Subtle gray */
+}
+
+/* Style for the container of the to-do list */
+.todo-container {
+  width: 300px;
+  margin: 20px auto; /* Center the container */
+  padding: 10px 20px;
+  font-family: "Roboto", sans-serif;
+  background-color: #fff; /* White */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: stretch;
+}
+
+/* Style for the heading of the todo app */
+.todo-heading {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Style for each individual to-do item */
+.todo-item {
+  width: calc(100% - 22px); /* Adjusted width */
+  background-color: #f9f9f9; /* Light gray */
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  box-sizing: border-box; /* Ensure padding doesn't increase width */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Style for completed to-do items */
+.todo-item.completed {
+  text-decoration: line-through;
+  color: #999;
+}
+
+/* Style for the input box */
+.todo-input {
+  width: calc(100% - 22px); /* Adjusted width */
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #008cba;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Style for the button */
+.todo-button {
+  width: calc(100% - 22px); /* Adjusted width */
+  padding: 10px;
+  background-color: #008cba;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+/* Style for the button on hover */
+.todo-button:hover {
+  background-color: #005f70;
+}
+
+.btn-edit,
+.btn-delete {
+  margin: 5px;
+  padding: 3px;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.todo-input-field {
+  width: calc(100% - 10px); /* Adjusted width */
+  padding: 5px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.btn-edit {
+  background-color: #9ad0c2;
+}
+
+.btn-delete {
+  background-color: #f9e8c9;
+}
+
+.btn-edit:hover {
+  background-color: #2d9596;
+}
+
+.btn-delete:hover {
+  background-color: #fff67e;
+}
