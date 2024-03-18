@@ -2,8 +2,17 @@ import { useState, useEffect } from "react";
 import InputField from "./components/InputField";
 import TodoLists from "./components/TodoLists";
 
+function getTodoLists() {
+  const lists = localStorage.getItem("todo-lists");
+  if (lists) {
+    return JSON.parse(lists);
+  } else {
+    return [];
+  }
+}
+
 function App() {
-  const [currentLists, setCurrentLists] = useState([]);
+  const [currentLists, setCurrentLists] = useState(getTodoLists());
 
   useEffect(() => {
     const storedLists = localStorage.getItem("todo-lists");
@@ -46,15 +55,7 @@ function App() {
   }
 
   useEffect(() => {
-    const storeCurrentLists = () => {
-      localStorage.setItem("todo-lists", JSON.stringify(currentLists));
-    };
-
-    // Call the function immediately after the effect runs
-    storeCurrentLists();
-
-    // Add currentLists as a dependency only for cleanup
-    return () => storeCurrentLists();
+    localStorage.setItem("todo-lists", JSON.stringify(currentLists));
   }, [currentLists]);
 
   return (
